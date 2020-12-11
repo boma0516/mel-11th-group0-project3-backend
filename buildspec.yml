@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - IMAGE_REPO_NAME=hero_inventory
-      - REPOSITORY_URI=366100691908.dkr.ecr.ap-southeast-2.amazonaws.com/hero_inventory
+      - REPOSITORY_URI=038311914075.dkr.ecr.us-east-2.amazonaws.com/hero_inventory
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
